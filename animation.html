@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Animation</title>
+	<style>
+		.main{
+			width:500px;
+			height: 50px;
+			overflow: hidden;
+			background: whitesmoke;
+			margin: auto;
+			position: relative;
+		}
+		.main div{
+			color:darkblue;
+			font-weight: bolder;
+			width:500px;
+			height: 50px;
+			animation-name: slide;
+			animation-duration: 4s;
+		}
+		@keyframes slide{
+			0%{
+				transform: translateX(0px);
+			}
+			50%{
+				transform: translateX(-500px);
+				position: absolute;
+				right: -500px;
+			}
+			100%{
+				transform: translateX(0px);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div>This is a website for users.</div>
+	</div>
+</body>
+</html>
